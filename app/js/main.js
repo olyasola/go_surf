@@ -39,6 +39,20 @@ $('.surf-slider').slick({
           slidesToShow: 2,
         }
       },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        }
+      },
     ]
 });
 
@@ -59,6 +73,13 @@ $('.slider-map').slick({
         breakpoint: 900,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
           centerMode: true,
         }
       },
