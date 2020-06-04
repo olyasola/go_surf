@@ -1,6 +1,6 @@
 $(function(){
 
-$('.header_slider').slick({
+$('.header__slider').slick({
     infinite: true,
     fade: true,
     prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="кнопка сверху"></img>',
@@ -11,7 +11,13 @@ $('.header_slider').slick({
 $('.slider-dotshead').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
-    asNavFor: '.header_slider',
+    asNavFor: '.header__slider',
+    responsive: [
+      {
+        breakpoint: 961,
+        settings: "unslick"
+      },
+    ]
 });
 
 $('.surf-slider').slick({
@@ -20,6 +26,20 @@ $('.surf-slider').slick({
     prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="кнопка сверху"></img>',
     nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.svg" alt="кнопка сверху"></img>',
     asNavFor: '.slider-map',
+    responsive: [
+      {
+        breakpoint: 1210,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
 });
 
 $('.slider-map').slick({
@@ -28,6 +48,21 @@ $('.slider-map').slick({
     arrows: false,
     asNavFor: '.surf-slider',
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1103,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+        }
+      },
+    ]
 });
 
 $('.holder__slider, .shop__slider').slick({

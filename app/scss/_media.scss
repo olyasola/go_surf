@@ -27,6 +27,9 @@
     .header__arrows{
         left: 130px;
     }
+    .surf-box__inner{
+        min-height: 650px;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -82,6 +85,93 @@
     }
     .slider-arrows__left{
         right: 60px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .slider-map {
+        max-width: 1000px;
+        min-height: 515px;
+    }
+    .slider-map .slick-list {
+        min-height: 515px;
+    }
+    .slider-dots--1 {
+        top: 273px;
+        .slider-dots__content{
+            transform: translateX(0);
+            &::before{
+                left: calc(0px - .5px);
+            }
+        }
+    }
+    .slider-dots--2 {
+        top: 232px;
+        left: -14px;
+    }
+    .slider-dots--3 {
+        top: 260px;
+        left: 35px;
+    }
+    .slider-dots--4 {
+        top: 410px;
+        left: -35px;
+    }
+    .slider-dots--5 {
+        top: 165px;
+        left: -60px;
+    }
+    .slider-dots--6 {
+        top: 455px;
+        left: -95px;
+    }
+    .slider-dots--7 {
+        top: 323px;
+        left: -89px;
+    }
+    .slider-dots--8 {
+        top: 408px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 1102px) {
+    .slider-map {
+        background-image: none;
+        max-width: 100%;
+        min-height: 280px;
+    }
+    .slider-dots__circle {
+        display: none;
+    }
+    .slider-dots__content {
+        display: block;
+        &::before {
+            display: none;
+        }
+    }
+    .slider-dots {
+        position: static;
+    }
+    .slider-map {
+        .slick-list {
+            overflow: hidden;
+            min-height: 280px;
+        }
+        .slick-track {
+            min-height: 280px;
+        }
+    }
+    .slider-dots__content,
+    .slider-dots--8 .slider-dots__content {
+        transform: translateX(0);
+    }
+    .slider-dots__content {
+        width: 285px;
+        padding: 28px 31px 0 32px;
+    }
+    .slider-map .slick-current .slider-dots__content {
+        background: rgba(204,204,204, 0.1);
     }
 }
 
@@ -154,6 +244,9 @@
     }
     .dots-box__name{
         line-height: 18px;
+    }
+    .surf__subtitle {
+        padding-right: 20px;
     }
 }
 
