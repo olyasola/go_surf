@@ -94,7 +94,7 @@ $('.holder__slider, .shop__slider').slick({
 });
 
 $('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="images/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="images/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
-$('.quantity').each(function() {
+$('.quantity').each(function(){
   var spinner = $(this),
     input = spinner.find('input[type="number"]'),
     btnUp = spinner.find('.quantity-up'),
@@ -145,5 +145,7 @@ $('.surfboard-box__circle').on('click', function(){
 $('.menu-btn').on('click', function(){
   $('.menu').toggleClass('active');
 });
+
+new WOW().init();
 
 });

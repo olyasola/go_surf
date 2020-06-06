@@ -6,8 +6,6 @@ let gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer');
-
-
 gulp.task('clean', async function(){
   del.sync('dist')
 })
@@ -46,7 +44,8 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
   return gulp.src([
-    'node_modules/slick-carousel/slick/slick.js'
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/wow.js/dist/wow.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -54,11 +53,11 @@ gulp.task('js', function(){
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function(){
   browserSync.init({
-      server: {
-          baseDir: "app/"
-      }
+    server: {
+      baseDir: "app/"
+    }
   });
 });
 
@@ -86,5 +85,4 @@ gulp.task('watch', function(){
 });
 
 gulp.task('build', gulp.series('clean', 'export'))
-
 gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'browser-sync', 'watch'));
